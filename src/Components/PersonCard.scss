@@ -1,0 +1,82 @@
+#PersonCard{
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    overflow: hidden;
+    background: var(--darkblue);
+    font-size: 10px;
+    
+    .section-top{
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 2rem;
+        border-radius: 1rem;
+        background: var(--blue);
+
+        .img-jeremy{
+            width: 100px;
+            border-radius: 50%;
+            border: 2px solid var(--white);
+        }
+
+        .text{
+            display: flex;
+            flex-direction: column;
+            font-weight: 500;
+            font-size: 1.5em;
+            color: var(--paleblue);
+
+            .name{
+                font-weight: 300;
+                font-size: 1.3em;
+                color: var(--white);
+            }
+        }
+    }
+
+    .items{
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem 1rem;
+
+        .item{
+            width: auto;
+            cursor: pointer;
+        }
+
+        .item:hover .text{
+            color: var(--white);
+        }
+
+        .text{
+            text-transform: capitalize;
+            color: var(--paleblue);
+        }
+
+        .text-selected{
+            color: var(--white);
+        }
+    }
+
+    @media (min-width: 1030px) {
+        .section-top{
+            flex-grow: 1;
+            flex-direction: column;
+            align-items: flex-start;
+
+            .text{
+                margin-top: 1rem;
+
+                .name{
+                    line-height: 1.2;
+                    font-size: 3em;
+                }
+            }
+        }
+
+        .items{
+            flex-direction: column;
+        }
+    }
+}
